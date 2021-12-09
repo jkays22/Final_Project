@@ -1,6 +1,6 @@
-# Blue Team: Summary of Operations
+#Blue Team: Summary of Operations
 
-## Table of Contents
+##Table of Contents
 - Network Topology
 - Description of Targets
 - Monitoring the Targets
@@ -63,18 +63,3 @@ CPU Usage Monitor is implemented as follows:
 The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. Excessive HTTP errors could suggest that there is a SQL Injection attack happening. It may not always be the case that a SQL Injection attack is happening but it is good to stay on top of it. 
 The HTTP Request size is meant to alert for the potential of a brute force attack occuring on your server, where someone may be trying to brute force their way into a company secret folder for example. This alert is usually reliable since there is a spike in the requests happening during a brute force attack. 
 Lastly is the CPU usage alert. This was created to look out for any malicious scripts being run on the system or server. This alert allows us to potentially discover these malicious scripts or discover unoptimized code that is causing a CPU spike. 
-
-### Suggestions for Going Further (Optional)
-_TODO_: 
-- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
-
-The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
-- Vulnerability 1
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 2
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 3
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
