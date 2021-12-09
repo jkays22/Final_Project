@@ -39,27 +39,35 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 #### Excessive HTTP Errors
 
-Excessive HTTP Errors is implemented as follows:
+![Excessive_HTTP](https://user-images.githubusercontent.com/88590862/145345457-a4a38a2a-0901-4e27-a0ac-4ee324ccea4b.PNG)
+
+- Excessive HTTP Errors is implemented as follows:
   - **Metric**: WHEN count () GROUPED OVER top 5 'http.response.status_code'
   - **Threshold**: IS ABOVE 400 FOR THE LAST 5 minutes
   - **Vulnerability Mitigated**: Brute Force attacks
   - **Reliability**: High Reliability
 
 #### HTTP Request Size Monitor
-HTTP Request Size Monitor is implemented as follows:
+
+![HTTP_Request](https://user-images.githubusercontent.com/88590862/145345486-85b990f0-9e8d-4a80-9a0f-f5886ef209ed.PNG)
+
+- HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum () OF http.response.bytes OVER all documents
   - **Threshold**: IS ABOVE 3500 FOR THE LAST 1 minute 
   - **Vulnerability Mitigated**: HTTP Request Smuggling
   - **Reliability**: High Reliability
 
 #### CPU Usage Monitor
-CPU Usage Monitor is implemented as follows:
+
+![CPU_Usage](https://user-images.githubusercontent.com/88590862/145345501-985418c5-c55b-475d-97b9-a26a5b64146c.PNG)
+
+- CPU Usage Monitor is implemented as follows:
   - **Metric**: WHEN max () OF system.process.cpu.total.pct OVER all documents
   - **Threshold**: IS ABOVE .5 FOR THE LAST 5 minutes
   - **Vulnerability Mitigated**: Monitor for malicious scripts 
   - **Reliability**: High Reliability
 
-#### The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. 
+### The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. 
 -Excessive HTTP errors could suggest that there is a  brute force attacking their way into a company secret folder for example. This alert is usually reliable since there is a spike in the requests happening during a brute force attack. 
 
 -The HTTP Request size is meant to alert for the potential of a HTTP Request smuggle occuring on your server; where someone may be trying to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users. 
