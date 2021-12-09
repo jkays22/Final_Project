@@ -48,8 +48,8 @@ Excessive HTTP Errors is implemented as follows:
 HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum () OF http.response.bytes OVER all documents
   - **Threshold**: IS ABOVE 3500 FOR THE LAST 1 minute 
-  - **Vulnerability Mitigated**: SQL Injections
-  - **Reliability**: Medium Reliability
+  - **Vulnerability Mitigated**: HTTP Request Smuggling
+  - **Reliability**: High Reliability
 
 #### CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
@@ -58,6 +58,7 @@ CPU Usage Monitor is implemented as follows:
   - **Vulnerability Mitigated**: Monitor for malicious scripts 
   - **Reliability**: High Reliability
 
-The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. Excessive HTTP errors could suggest that there is a SQL Injection attack happening. It may not always be the case that a SQL Injection attack is happening but it is good to stay on top of it. 
-The HTTP Request size is meant to alert for the potential of a brute force attack occuring on your server, where someone may be trying to brute force their way into a company secret folder for example. This alert is usually reliable since there is a spike in the requests happening during a brute force attack. 
-Lastly is the CPU usage alert. This was created to look out for any malicious scripts being run on the system or server. This alert allows us to potentially discover these malicious scripts or discover unoptimized code that is causing a CPU spike. 
+#### The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. 
+-Excessive HTTP errors could suggest that there is a  brute force attacking their way into a company secret folder for example. This alert is usually reliable since there is a spike in the requests happening during a brute force attack. 
+-The HTTP Request size is meant to alert for the potential of a HTTP Request smuggle occuring on your server; where someone may be trying to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users. 
+-Lastly is the CPU usage alert. This was created to look out for any malicious scripts being run on the system or server. This alert allows us to potentially discover these malicious scripts or discover unoptimized code that is causing a CPU spike. 
