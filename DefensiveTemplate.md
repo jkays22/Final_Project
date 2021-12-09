@@ -61,5 +61,7 @@ CPU Usage Monitor is implemented as follows:
 
 #### The three alerts shown above are meant to provide a quick alert to items that may be in need of attention. 
 -Excessive HTTP errors could suggest that there is a  brute force attacking their way into a company secret folder for example. This alert is usually reliable since there is a spike in the requests happening during a brute force attack. 
+
 -The HTTP Request size is meant to alert for the potential of a HTTP Request smuggle occuring on your server; where someone may be trying to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users. 
+
 -Lastly is the CPU usage alert. This was created to look out for any malicious scripts being run on the system or server. This alert allows us to potentially discover these malicious scripts or discover unoptimized code that is causing a CPU spike. 
