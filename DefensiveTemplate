@@ -41,15 +41,15 @@ Traffic to these services should be carefully monitored. To this end, we have im
 Excessive HTTP Errors is implemented as follows:
   - **Metric**: WHEN count () GROUPED OVER top 5 'http.response.status_code'
   - **Threshold**: IS ABOVE 400 FOR THE LAST 5 minutes
-  - **Vulnerability Mitigated**: SQL Injections
-  - **Reliability**: Medium Reliability
+  - **Vulnerability Mitigated**: Brute Force attacks
+  - **Reliability**: High Reliability
 
 #### HTTP Request Size Monitor
 HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum () OF http.response.status_code OVER all documents
   - **Threshold**: IS ABOVE 3500 FOR THE LAST 1 minute 
-  - **Vulnerability Mitigated**: Brute Force attacks
-  - **Reliability**: High Reliability
+  - **Vulnerability Mitigated**: SQL Injections
+  - **Reliability**: Medium Reliability
 
 #### CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
