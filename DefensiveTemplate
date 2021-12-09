@@ -46,7 +46,7 @@ Excessive HTTP Errors is implemented as follows:
 
 #### HTTP Request Size Monitor
 HTTP Request Size Monitor is implemented as follows:
-  - **Metric**: WHEN sum () OF http.response.status_code OVER all documents
+  - **Metric**: WHEN sum () OF http.response.bytes OVER all documents
   - **Threshold**: IS ABOVE 3500 FOR THE LAST 1 minute 
   - **Vulnerability Mitigated**: SQL Injections
   - **Reliability**: Medium Reliability
