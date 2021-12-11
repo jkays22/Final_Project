@@ -64,6 +64,9 @@
     - OS version
         - Windows NT 10.0; Win64; x64
 
+![Torrent1](https://user-images.githubusercontent.com/88590862/145689694-800edeb3-1015-4fdb-932b-0186702d0938.PNG)
+
+
 2. Which torrent file did the user download? 
     - Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
 
