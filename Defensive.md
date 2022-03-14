@@ -27,6 +27,10 @@ The following machines were identified on the network:
   - **Operating System**: LINUX
   - **Purpose**: Apache web server
   - **IP Address**: 192.168.1.110
+
+
+![Network_Topology](https://user-images.githubusercontent.com/88590862/158232205-8182744f-ef63-4a29-8e7e-fca05a0de01a.png)
+
 ### Description of Targets
 
 The target of this attack was: `Target 1` 192.168.1.110
